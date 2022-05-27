@@ -1,0 +1,17 @@
+.bg {
+    background: linear-gradient(36deg, #0D0D0D 8%, #02735E 89%)!important;
+}
+
+.pos-background {
+    background: linear-gradient(36deg, #014034 8%, #02735E 89%)!important;
+    height: 60px;
+}
+
+.font1 {
+    color: white;
+}
+
+.redes {
+    font-size: 60px;
+    color: white;
+}

@@ -1,11 +1,33 @@
-.titulo {
-    color: green;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.back {
+    background: linear-gradient(36deg, #0D0D0D 8%, #02735E 89%);
 }
 
-.img {
-    width: 500px;
-    height: 500px;
-    display: block;
-    margin: 0 auto;
+.titulo {
+    color: white;
+    font-weight: bold;
+}
+
+.font {
+    color: whitesmoke !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: bold !important;
+}
+
+.background {
+    background-image: url(../home/assets/img/aurora-boreal.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button {
+    color: white !important;
+    background-color: #05977c !important;
+    font-weight: bold!important;
+    border-color: #02735E!important;
+    border-radius: 20px!important;
+}
+
+.post {
+    background-color: white!important;
 }
