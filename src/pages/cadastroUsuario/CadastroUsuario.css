@@ -1,0 +1,45 @@
+.imagem2 {
+    background-image: url(https://i.imgur.com/2ShZGmK.gif);
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.textos2 {
+    font-weight: bold!important;
+}
+
+.btnCadastrar {
+    color: white !important;
+    background-color: #01401C!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.btnCadastrar:hover {
+    background-color: #02733E!important;
+    letter-spacing: 0.15cm!important;
+    box-shadow: 0 0 35px #038C4C!important;
+}
+
+.btnCancelar {
+    margin-right: 20px!important;
+    color: white !important;
+    background-color: #F20F38!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.btnCancelar:hover {
+    background-color: #D90D1E!important;
+    letter-spacing: 0.15cm!important;
+    box-shadow: 0 0 35px #BF0426!important;
+}

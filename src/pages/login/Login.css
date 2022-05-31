@@ -1,5 +1,5 @@
 .textos {
-    font-weight: bold;
+    font-weight: bold!important;
 }
 
 .imagem {
@@ -13,4 +13,20 @@
 
 .text-decorator-none {
     text-decoration: none;
+}
+
+.button-login {
+    color: white !important;
+    background-color: black !important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.button-login:hover {
+    background-color: #017761!important;
+    letter-spacing: 0.20cm!important;
+    box-shadow: 0 0 35px #05977c!important;
 }

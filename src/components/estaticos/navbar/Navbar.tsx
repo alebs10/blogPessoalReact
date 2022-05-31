@@ -10,13 +10,13 @@ function Navbar() {
       <AppBar position="static" className="back" >
         <Toolbar variant="dense" className="font">
           <Box className="cursor" >
-            <Typography variant="h6" color="inherit" >
+            <Typography variant="h6" color="inherit" className="cursor" >
               Blog Pessoal
             </Typography>
           </Box>
 
           <Box display="flex" justifyContent="start">
-            <Box mx={1} className="cursor">
+            <Box mx={1} className="cursor ">
               <Typography variant="h6" color="inherit">
                 Home
               </Typography>

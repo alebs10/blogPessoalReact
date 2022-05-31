@@ -22,10 +22,19 @@
 
 .button {
     color: white !important;
-    background-color: #05977c !important;
+    background-color: transparent !important;
     font-weight: bold!important;
     border-color: #02735E!important;
     border-radius: 20px!important;
+    text-decoration: none!important;
+    transition: 0.5s!important;
+    letter-spacing: 3px!important;
+}
+
+.button:hover {
+    background-color: #0D0D0D !important;
+    letter-spacing: 0.20cm!important;
+    box-shadow: 0 0 35px #05977c!important;
 }
 
 .post {

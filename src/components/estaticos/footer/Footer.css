@@ -8,10 +8,10 @@
 }
 
 .font1 {
-    color: white;
+    color: white!important;
 }
 
 .redes {
-    font-size: 60px;
-    color: white;
+    font-size: 60px!important;
+    color: white!important;
 }

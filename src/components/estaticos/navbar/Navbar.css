@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .back {
-    background: linear-gradient(36deg, #0D0D0D 8%, #02735E 89%)!important;
+    background: linear-gradient(36deg, #0D0D0D 8%, #262626 89%)!important;
 }
 
 .font {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif!important;
 }
 
 .titulo {
@@ -18,4 +18,33 @@
 
 .text-decorator-none {
     text-decoration: none;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: black;
+    margin: 0 10px;
+    padding: 10px 25px;
+    position: relative;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: #c2c39c;
+    z-index: -1;
+    box-shadow: 0 0 10px #c2c39c, 0 0 20px #c2c39c, 0 0 40px #c2c39c, 0 0 80px #c2c39c, 0 0 100px #c2c39c;
+    transition: 0.25s;
+}
+
+.menu a:hover::before {
+    width: 100%;
 }
