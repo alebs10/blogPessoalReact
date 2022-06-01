@@ -30,7 +30,7 @@
 .btnCancelar {
     margin-right: 20px!important;
     color: white !important;
-    background-color: #F20F38!important;
+    background-color: #73030D!important;
     text-decoration: none!important;
     text-transform: uppercase!important;
     letter-spacing: 0.1cm!important;
@@ -39,7 +39,7 @@
 }
 
 .btnCancelar:hover {
-    background-color: #D90D1E!important;
+    background-color: #8C041D!important;
     letter-spacing: 0.15cm!important;
-    box-shadow: 0 0 35px #BF0426!important;
+    box-shadow: 0 0 35px #8C041D!important;
 }

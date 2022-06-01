@@ -1,8 +1,12 @@
 import React from 'react';
 import { Typography, Box, Grid, Button } from '@material-ui/core';
 import './Home.css';
+import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 
 function Home() {
+
+  
+
   return (
     <>
       <Grid container direction="row" justifyContent="center" alignItems="center" className='background'>
@@ -21,6 +25,7 @@ function Home() {
           <img src="https://i.imgur.com/a48uw5A.gif" alt="esqueleto" width="500px" height="500px" />
         </Grid>
         <Grid xs={12} className="post">
+          <TabPostagem/>
         </Grid>
       </Grid>
     </>
