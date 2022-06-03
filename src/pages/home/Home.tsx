@@ -1,11 +1,12 @@
 import React from 'react';
 import { Typography, Box, Grid, Button } from '@material-ui/core';
 import './Home.css';
-import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
+import TabPostagem from '../../components/postagens/tabPostagem/TabPostagem';
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 
 function Home() {
 
-  
+
 
   return (
     <>
@@ -17,6 +18,12 @@ function Home() {
           </Box>
           <Box display="flex" justifyContent="center">
             <Box marginRight={1}>
+              <ModalPostagem />
+            </Box>
+            <Button variant="outlined" className='botao'>Ver Postagens</Button>
+          </Box>
+          <Box display="flex" justifyContent="center">
+            <Box marginRight={1}>
             </Box>
             <Button variant="outlined" className='button'>Ver Postagens</Button>
           </Box>
@@ -25,7 +32,7 @@ function Home() {
           <img src="https://i.imgur.com/a48uw5A.gif" alt="esqueleto" width="500px" height="500px" />
         </Grid>
         <Grid xs={12} className="post">
-          <TabPostagem/>
+          <TabPostagem />
         </Grid>
       </Grid>
     </>
