@@ -34,7 +34,7 @@ function CadastroPostagem() {
         tema: null
     })
 
-    useEffect(() => {
+    useEffect(() => { 
         setPostagem({
             ...postagem,
             tema: tema
@@ -78,20 +78,39 @@ function CadastroPostagem() {
         e.preventDefault()
 
         if (id !== undefined) {
-            put(`/postagens`, postagem, setPostagem, {
-                headers: {
-                    'Authorization': token
-                }
-            })
-            alert('Postagem atualizada com sucesso');
+            try {
+                await put(`/postagens`, postagem, setPostagem, {
+                    headers: {
+                        'Authorization': token
+                    }
+                })
+
+                alert('Postagem atualizada com sucesso');
+
+            // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
+            } catch (error) {
+                console.log(`Error: ${error}`)
+                alert("Erro, por favor verifique a quantidade minima de caracteres")
+            }
+
         } else {
-            post(`/postagens`, postagem, setPostagem, {
-                headers: {
-                    'Authorization': token
-                }
-            })
-            alert('Postagem cadastrada com sucesso');
+            // TRY: Tenta executar o cadastro
+            try {
+                await post(`/postagens`, postagem, setPostagem, {
+                    headers: {
+                        'Authorization': token
+                    }
+                })
+                
+                alert('Postagem cadastrada com sucesso');
+            
+            // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
+            } catch (error) {
+                console.log(`Error: ${error}`)
+                alert("Erro, por favor verifique a quantidade minima de caracteres")
+            }
         }
+        
         back()
 
     }
@@ -111,7 +130,7 @@ function CadastroPostagem() {
                     <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
-                        id="demo-simple-select-helper" onChange={(e) => buscaId(`/tema/${e.target.value}`, setTema, {
+                        id="demo-simple-select-helper" onChange={(e) => buscaId(`/temas/${e.target.value}`, setTema, {
                             headers: {
                                 'Authorization': token
                             }

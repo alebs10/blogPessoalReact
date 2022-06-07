@@ -41,7 +41,7 @@ function CadastrarTema() {
         })
     }
 
-    function updatedTema(e: ChangeEvent<HTMLInputElement>) {
+    function updatedTema(e: ChangeEvent<HTMLInputElement>){
 
         setTema({
             ...tema,
@@ -65,13 +65,13 @@ function CadastrarTema() {
 
                 alert('Tema atualizado com sucesso');
 
-                // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
+            // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
             } catch (error) {
                 console.log(`Error: ${error}`)
                 alert("Erro, por favor verifique a quantidade minima de caracteres")
             }
 
-            // Se o ID for indefinido, tente Cadastrar
+        // Se o ID for indefinido, tente Cadastrar
         } else {
 
             // TRY: Tenta executar o cadastro
@@ -81,36 +81,36 @@ function CadastrarTema() {
                         'Authorization': token
                     }
                 })
-
+                
                 alert('Tema cadastrado com sucesso');
-
-                // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
+            
+            // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
             } catch (error) {
                 console.log(`Error: ${error}`)
                 alert("Erro, por favor verifique a quantidade minima de caracteres")
             }
         }
-
+        
         back()
     }
 
-    function back() {
+    function back(){
         history('/temas')
     }
 
-    return (
-        <Container maxWidth="sm" className="topo">
-            <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
+return (
+    <Container maxWidth="sm" className="topo">
+        <form onSubmit={onSubmit}>
+            <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
 
-                <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
+            <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
 
-                <Button type="submit" variant="contained" color="primary">
-                    Finalizar
-                </Button>
-            </form>
-        </Container>
-    )
+            <Button type="submit" variant="contained" color="primary">
+                Finalizar
+            </Button>
+        </form>
+    </Container>
+)
 }
 
 export default CadastrarTema

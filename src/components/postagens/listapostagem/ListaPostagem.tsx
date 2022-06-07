@@ -47,13 +47,13 @@ function ListaPostagem() {
                                     Postagens
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                    Título
+                                {post.titulo}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    Texto da Postagem
+                                {post.texto}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    Tema
+                                {post.tema?.descricao}
                                 </Typography>
                             </CardContent>
                             <CardActions>
