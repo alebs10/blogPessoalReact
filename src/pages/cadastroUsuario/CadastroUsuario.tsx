@@ -51,25 +51,19 @@ function CadastroUsuario() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
 
-        // Estrutura Condicional que verifica se as senhas batem e se a Senha tem mais de 8 caracteres
         if (confirmarSenha === user.senha && user.senha.length >= 8) {
 
-            //Tenta executar o cadastro
             try {
                 await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
                 alert("Usuário cadastrado com sucesso")
 
-                //Se houver erro, pegue o Erro e retorna uma msg   
             } catch (error) {
-
-                //Pode modificar a msg de acordo com o erro 
-                alert("Usuário já existe")
+                console.log(`Error: ${error}`)
+                alert("Usuário já existente")
             }
-        } else {
-            alert("Insira no minímo 8 caracteres na senha")
 
-            setUser({...user, senha: ""})
-            setConfirmarSenha("")
+        } else {
+            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
         }
     }
 
@@ -87,7 +81,7 @@ function CadastroUsuario() {
 
                         <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="usuario" label="usuario" variant="outlined" name="usuario" margin="normal" fullWidth required />
 
-                        
+                        <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="foto" label="foto" variant="outlined" name="foto" margin="normal" fullWidth/>
 
                         <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="senha" label="senha" variant="outlined" name="senha" margin="normal" type="password" fullWidth />
 
