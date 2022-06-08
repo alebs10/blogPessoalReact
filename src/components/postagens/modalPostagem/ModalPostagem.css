@@ -4,5 +4,19 @@
 
 .btnModal {
     border-color: white !important;
-    background-color: white !important;
+    background-color: transparent!important;
+    color: white !important;
+    font-weight: bold!important;
+    border-color: #02735E!important;
+    border-radius: 20px!important;
+    text-decoration: none!important;
+    transition: 0.5s!important;
+    letter-spacing: 3px!important;
+}
+
+.btnModal:hover {
+    background-color: #D9D9D9 !important;
+    color: #0D0D0D !important;
+    letter-spacing: 0.15cm!important;
+    box-shadow: 0 0 35px #05977c!important;
 }

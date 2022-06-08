@@ -6,21 +6,31 @@ import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostage
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function Home() {
 
   let navigate = useNavigate();
   const token = useSelector<TokenState, TokenState["tokens"]>(
-      (state) => state.tokens
-    );
-  
+    (state) => state.tokens
+  );
+
   useEffect(() => {
     if (token == "") {
-        alert("Você precisa estar logado")
-        navigate("/login")
+      toast.error('Você precisa estar logado!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      navigate("/login")
 
     }
-}, [token])
+  }, [token])
 
 
   return (
@@ -33,10 +43,10 @@ function Home() {
           </Box>
           <Box display="flex" justifyContent="center">
             <Box marginRight={1}>
-            <ModalPostagem />
+              <ModalPostagem />
             </Box>
             <Link to="/posts" className='text-decorator'>
-            <Button variant="outlined" className='button'>Ver Postagens</Button>
+              <Button variant="outlined" className='button'>Ver Postagens</Button>
             </Link>
           </Box>
         </Grid>

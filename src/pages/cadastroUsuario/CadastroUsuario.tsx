@@ -5,6 +5,7 @@ import User from "../../models/User";
 import { cadastroUsuario } from "../../services/Service";
 import { useNavigate } from "react-router-dom";
 import './CadastroUsuario.css';
+import { toast } from 'react-toastify';
 
 function CadastroUsuario() {
 
@@ -54,16 +55,44 @@ function CadastroUsuario() {
         if (confirmarSenha === user.senha && user.senha.length >= 8) {
 
             try {
-                await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-                alert("Usuário cadastrado com sucesso")
+                await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
+                toast.success('🐲 Usuário cadastrado com sucesso !', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark"
+                  });
 
             } catch (error) {
                 console.log(`Error: ${error}`)
-                alert("Usuário já existente")
+                toast.error('👺 Usuário já existente', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark"
+                  });
+                // alert("Usuário já existente")
             }
 
         } else {
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+            toast.error('👺 Dados inconsistentes. Favor verificar as informações de cadastro.', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark"
+              });
         }
     }
 
