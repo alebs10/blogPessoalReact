@@ -1,0 +1,31 @@
+.btnSim {
+    color: white !important;
+    background-color: #01401C!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.btnSim:hover {
+    background-color: #02733E!important;
+    letter-spacing: 0.15cm!important;
+    box-shadow: 0 0 35px #038C4C!important;
+}
+
+.btnNao {
+    color: white !important;
+    background-color: #73030D!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.btnNao:hover {
+    background-color: #8C041D!important;
+    letter-spacing: 0.15cm!important;
+    box-shadow: 0 0 35px #8C041D!important;
+}
